@@ -1,0 +1,29 @@
+
+# Comentários sobre as variáveis usadas:
+nome = input("Qual seu nome? ")
+peso = int(input("Digite seu peso: "))
+
+# Percentuais ditos a partir da literatura (livros de Fisiologia Humana e Bioquímica):
+b = 0.07   # sangue
+c = 0.12   # massa óssea feminina
+d = 0.15   # massa óssea masculina
+
+print("\nEscolha uma opção:")
+print("1 - Masculino")
+print("2 - Feminino")
+print("3 - Sair")
+
+opcao = input("Digite o número da opção: ")
+
+# Quantidade de sangue (variável, mas comum em média ao ser humano):
+print(f"{nome}, a sua quantidade de sangue é igual a {peso * b:.2f} kg.")
+
+# Verificação da opção:
+if opcao == "1":
+    print(f"{nome}, como homem, o peso da sua massa óssea é {peso * d:.2f} kg.")
+elif opcao == "2":
+    print(f"{nome}, como mulher, o peso da sua massa óssea é {peso * c:.2f} kg.")
+elif opcao == "3":
+    print("Saindo do programa...")
+else:
+    print("Opção inválida!")
